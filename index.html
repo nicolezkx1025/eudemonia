@@ -64,45 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-部落格生快" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/02/19/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%94%9F%E5%BF%AB/" class="article-date">
-  <time datetime="2023-02-18T17:59:12.000Z" itemprop="datePublished">2023-02-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/19/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%94%9F%E5%BF%AB/">部落格生快</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Since-the-blog-was-built-on-19th-Feb-2023-I’m-so-glad-to-welcome-its-birth-and-decide-to-give-it-a-name-Eudemonia"><a href="#Since-the-blog-was-built-on-19th-Feb-2023-I’m-so-glad-to-welcome-its-birth-and-decide-to-give-it-a-name-Eudemonia" class="headerlink" title="Since the blog was built on 19th Feb 2023, I’m so glad to welcome its birth and decide to give it a name Eudemonia."></a>Since the blog was built on <em>19th Feb 2023</em>, I’m so glad to welcome its birth and decide to give it a name <em>Eudemonia</em>.</h4><p>Wish her a pleasant journey!</p>
-<p>本来就想以这个清新域名来命名的，但挂靠的github只能以<em>username</em>.github.io发布。<br>那就只能等我建设到想氪金买下个域名之后再迁站。<br>轻量级网站的好处是不需要考虑服务器的问题，Hexo使用的感受丝滑入扣，想迁站、迁文档了也不用担心笔记本坏掉的问题。前阵子刚修好供电芯片，于是有了除重要资料上云备份的同时，顺手也给自己搭个窝~</p>
-<p>Feel that it quite urgant to find a steady place to put my groceries and exhibit some other delicate selections at the sametime.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%94%9F%E5%BF%AB/" data-id="cleac6loo0003d8vj56f93wqa" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-post-title-with-whitespace" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/02/19/post-title-with-whitespace/" class="article-date">
@@ -117,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/19/post-title-with-whitespace/">post title with whitespace</a>
+      <a class="article-title" href="/2023/02/19/post-title-with-whitespace/">「世界上只有不到 50 人同时掌握 PQC 底层的数学和必要的密码学知识。」</a>
     </h1>
   
 
@@ -125,60 +86,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>&ensp;&ensp;起了一个噱头标题，但严肃来说，这里也是引用的马里兰大学帕克分校的密码学家 Jonathan Katz的说法。<br>后量子密码（PQC）破译一个少一个，就像人类在强人工智能面前终将逐步被替代，在最近大火的自然语音处理领域腾空出世也有迹可循，Bert被GPT替代，GPT被chatGPT替代。<br>重赏之下，破解这些曾经可靠的密钥只是时间问题。为什么想起来写一篇这样的选题，起因是对流浪地球2里的核密码破解的困难程度感到好奇。</p>
+<p>&ensp;&ensp;电影中使用550W超级量子计算机，对剩余核弹的破译时间也还需要700多个小时。在流浪地球的世界观框架下，MOSS同时具有Evil AIs和Angel AIs，所以这700多个小时是那部分Evil AIs有意为之，故意拖延时间的。<br>但是这也说明了破译足够有难度的密码也需要大量的时间。<br>&ensp;&ensp;那么是什么决定了密码的破译难度呢？为了应对目前现代密码学基于经典计算机设计的加密技术在量子计算机面前不适用的威胁。<br>本着一颗好奇心，本系列文章将围绕美国国家标准与技术研究院（NIST）机构近年来研究的，对那些有潜力成为全世界可以采用的新标准算法进行笼统业余的粗略介绍。</p>
+<p>&ensp;&ensp;根据一种来自查理芒格的思维方式，凡事可以从反教材入手，我们可以初探一下一开始就败下阵来的算法有什么特点，以及如何避免这样的特点。</p>
+<p>&ensp;&ensp;2022年7月5日，NIST公布其后量子密码（PQC）标准化项目第三轮筛选的结果，并公布第四轮候选密钥建立机制的入选算法。<br>虽然SIKE因密钥和密文较小具有突出优势，以一度高性价比的可靠表现备受关注，NIST将在第四轮继续进行研究讨论，但在同年7月30日和8月8日，<br>SIKE分别被比利时鲁汶大学(KU Leuven)开发的名为Magma的程序和来自布里斯托大学团队设计的一种称为“挠点”(torsion point)的方法一一破解。<br>这其中最令人意想不到的是，SIDH是最早实用的基于同源的加密协议之一，而SIKE是它的实例化，这一算法怎么也算的上是21世纪的年轻新星，并且在它诞生的12年里一直给人留下安全性高，简洁高效的印象，这次却在1个月内被攻破两次。事出突然，那么SIKE的算法具体是什么呢，这次的攻击到底是使用了什么先进的数学方法。</p>
+<p>&ensp;&ensp;SIKE算法，全称Supersingular Isogeny Key Encapsulation, 一种基于SIDH，即超奇异同源 Diffie-Hellman公钥交换协议的实例。<br>Jao和Luca De Feo在一篇Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies<a href="#refer-anchor-1"><sup>1</sup></a>提出，刊登在Post-Quantum Cryptography<a href="#refer-anchor-2"><sup>2</sup></a>一书，作者是台湾中央研究院的Bo-Yin Yang。<br>该方法可以概括为，假设Alice和Bob两人想要秘密交换信息，但是处于一个不安全的环境下。Alice和Bob抽象为两个图（graph），</p>
+<p>####&ensp;&ensp;Overview of SIDH:</p>
+<p>&ensp;&ensp;&ensp;&ensp;1. Public parameters: Supersingular elliptic curve E over F p<sup>2</sup><br>   <img src="img.png" alt="img.png"></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;椭圆曲线 <em>E</em> 定义在 <em>q=p<sup>2</sup></em> ，<em>p</em> 是素数，其实我感觉这里field是GF有限域</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;超奇异椭圆曲线定义：如果一条定义在 <em>Fq</em> 上的椭圆曲线 <em>E</em> 的自同态环在 <em>Fq</em> 的代数闭包上是不可交换的，那么这个椭圆曲线就被称为超奇异椭圆曲线。</p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Isogenies同源定义：是指两条椭圆曲线之间的同态，即把一条椭圆曲线上的点映射到另一条椭圆曲线上。<br>   举个例子，假如有两条定义在 <em>Fq</em> 上的椭圆曲线 <em>E1</em> 和 <em>E2</em> ，<br>   那么映射 <em>φ:</em> <em>φ(P1)=P2_，_P1∈E1_，_P2∈E2</em> 就可以称作一个同源。</p>
+<p>&ensp;&ensp;&ensp;&ensp;2. Alice chooses a kernel A ⊂ E(F p<sup>2</sup>) and sends E/A to Bob.</p>
+<p>&ensp;&ensp;&ensp;&ensp;3. Bob chooses a kernel B ⊂ E(F p<sup>2</sup>) and sends E/B to Alice.</p>
+<p>&ensp;&ensp;&ensp;&ensp;4. The shared secret is<br>E/&lt;A, B&gt; = (E/A)/φ下确界A(B) = (E/B)/φ下确界<inf>B</inf>(A). &ensp;&ensp;<em># todo</em> <em>下确界符号查一下怎么打出来</em></p>
+<p>####&ensp;&ensp;Changes for SIKE:</p>
+<p>&ensp;&ensp;&ensp;&ensp;curve <em>E</em> : y<sup>2</sup>= x<sup>3</sup> + 6x<sup>2</sup> + x</p>
+<p>&ensp;&ensp;</p>
+<p>&ensp;&ensp;</p>
+<p>####&ensp;&ensp;加载中…… 新坑待填，稍安勿躁。<em>To Be Continued</em> ^O^/</p>
+<p>&ensp;&ensp;分享一网络笑话，这一段密码，你猜是什么意思？Cindycy1/2ezdgg</p>
+<p>&ensp;&ensp;“先帝创业未半而中道崩殂” hhhh</p>
+<p>&ensp;&ensp;</p>
+<div id="refer-anchor-1"></div>
+
+<p><em>[1]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/chapter/10.1007/978-3-642-25405-5_2"><em>Paper: Towards Quantum-Resistant Cryptosystems from Supersingular Elliptic Curve Isogenies</em></a></p>
+<div id="refer-anchor-2"></div>    
+
+<p><em>[2]</em> <a target="_blank" rel="noopener" href="https://link.springer.com/book/10.1007/978-3-642-25405-5"><em>Springer LNCS series Book:</em> <em>Post-Quantum Cryptography</em></a></p>
+
       
     </div>
     <footer class="article-footer">
       <a data-url="http://example.com/2023/02/19/post-title-with-whitespace/" data-id="cleac6lol0002d8vj481d46ji" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/02/19/hello-world/" class="article-date">
-  <time datetime="2023-02-18T16:06:48.116Z" itemprop="datePublished">2023-02-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/hello-world/" data-id="cleac6loh0001d8vj12bgcfnj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,15 +158,7 @@
       <ul>
         
           <li>
-            <a href="/2023/02/19/%E9%83%A8%E8%90%BD%E6%A0%BC%E7%94%9F%E5%BF%AB/">部落格生快</a>
-          </li>
-        
-          <li>
-            <a href="/2023/02/19/post-title-with-whitespace/">post title with whitespace</a>
-          </li>
-        
-          <li>
-            <a href="/2023/02/19/hello-world/">Hello World</a>
+            <a href="/2023/02/19/post-title-with-whitespace/">「世界上只有不到 50 人同时掌握 PQC 底层的数学和必要的密码学知识。」</a>
           </li>
         
       </ul>
